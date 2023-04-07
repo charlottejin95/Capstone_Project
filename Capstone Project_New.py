@@ -158,7 +158,7 @@ if execute_cell_flag:
     register_env("markets-daily_investor-v0",
                  lambda config:SubGymMarketsDailyInvestorEnv_v0(**config), )
     
-    name_xp='dpn_market_test_4'
+    name_xp='dqn_market_cloud_1'
     
     tune.run("DQN",
              name=name_xp,
@@ -213,6 +213,8 @@ if execute_cell_flag:
 # In[71]:
 
 
+
+'''
 import numpy as np
 np.random.seed(0)
 
@@ -484,39 +486,5 @@ for metric in list_interest:
     sns.displot(data = df, x=metric, hue='name',  kind="kde")
     plt.show()
 
-
-# # Data Simulation
-
-# In[34]:
-
-
-import numpy as np
-import pandas as pd
-from matplotlib import pyplot as plt
-
-from abides_core import abides
-from abides_core.utils import parse_logs_df, ns_date, str_to_ns, fmt_ts
-from abides_markets.configs import rmsc04
-
-
-config = rmsc04.build_config()
-end_state = abides.run( config )
-
-
-# In[36]:
-
-
-order_book = end_state["agents"][0].order_books["ABM"]
-
-
-# In[37]:
-
-
-order_book
-
-
-# In[ ]:
-
-
-
+'''
 
