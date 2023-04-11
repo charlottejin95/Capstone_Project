@@ -148,6 +148,7 @@ import tensorboard
 
 # In[67]:
 
+print('Start DQN Training')
 
 execute_cell_flag=True
 
@@ -158,7 +159,7 @@ if execute_cell_flag:
     register_env("markets-daily_investor-v0",
                  lambda config:SubGymMarketsDailyInvestorEnv_v0(**config), )
     
-    name_xp='dqn_market_cloud_1'
+    name_xp='/gobal/scratch/users/irisma/dqn_market_cloud_1'
     
     tune.run("DQN",
              name=name_xp,
@@ -171,7 +172,7 @@ if execute_cell_flag:
                                    'timestep_duration':"10S",
                                    'mkt_close':"16:00:00",
                                    'timestep_duration':"60s",
-                                   'starting_cash': 1_000_000,
+                                   'starting_cash': 1000000, #original 1_000_000
                                    'order_fixed_size': 10,
                                    'state_history_length':4,
                                    'market_data_buffer_length': 5,
