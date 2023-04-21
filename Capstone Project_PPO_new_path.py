@@ -218,14 +218,14 @@ if execute_cell_flag:
     register_env("markets-daily_investor-v0",
                  lambda config:SubGymMarketsDailyInvestorEnv_v0(**config), )
     
-    name_xp='ppo_market_run100_1'
+    name_xp='/gobal/scratch/users/irisma/ppo_market_run1000_1'
     
     tune.run("PPO",#DQN
              name=name_xp,
              resume=True,
-             stop={'training_iteration':100},
+             stop={'training_iteration':1000},
              checkpoint_at_end=True,
-             checkpoint_freq=5,
+             checkpoint_freq=10,
              config={'env':"markets-daily_investor-v0",
                      'env_config':{'background_config':'rmsc04',
                                    'timestep_duration':"10S",
@@ -242,13 +242,13 @@ if execute_cell_flag:
                                    #'execution_window':'04:00:00',
                                    #.... Here we just use the default values
                                    },
-                     'seed':tune.grid_search([1]),
+                     'seed':tune.grid_search([1,2,3]),
              #'seed':tune.grid_search([1,2,3]),
                      #'num_gpus':0,
                      #'num_workers':0,
                      #'hiddens':[50,20],
                      'gamma':1,
-                     'lr':tune.grid_search([0.001]),
+                     'lr':tune.grid_search([0.001,0.0001,0.01]),
              #'lr':tune.grid_search([0.001,0.0001,0.01]),
                      'framework':'torch',
                      #'observation_filter':'MeanStdFilter',
