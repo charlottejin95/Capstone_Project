@@ -253,15 +253,16 @@ if execute_cell_flag:
     register_env("markets-daily_investor-v0",
                  lambda config:SubGymMarketsDailyInvestorEnv_v0(**config), )
     
-    name_xp='ppo_lstm_market_run100_1'
+    name_xp='ppo_lstm_market_run1000_1'
     # Register the above custom model.
     ModelCatalog.register_custom_model("my_torch_model", MyCustomModel)
     tune.run("PPO",#DQN
              name=name_xp,
+             local_dir="/global/scratch/users/irisma/ppo_lstm_market_run1000_1",
              resume=False,
-             stop={'training_iteration':100},
+             stop={'training_iteration':1000},
              checkpoint_at_end=True,
-             checkpoint_freq=5,
+             checkpoint_freq=10,
              
              
              
@@ -374,7 +375,7 @@ class policyRL:
         self.name='r1'
         name_xp='PPO_markets-daily_investor-v0_b5e34_00000_0_lr=0.001,seed=1_2023-04-12_15-16-45'
         
-        data_folder=f"~/ray_results/ppo_market_run100_1/{name_xp}"
+        data_folder=f"/global/scratch/users/irisma/ppo_lstm_market_run1000_1/ppo_lstm_market_run1000_1/{name_xp}"
         analysis=Analysis(data_folder)
         trail_dataframes=analysis.trial_dataframes
         trials=list(trail_dataframes.keys())
