@@ -209,7 +209,7 @@ import tensorboard
 # In[24]:
 
 
-get_ipython().system('pip install torch')
+#get_ipython().system('pip install torch')
 
 
 # In[34]:
