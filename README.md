@@ -4,7 +4,9 @@
 
 This capstone project explores how to leverage **Reinforcement Learning (RL)** and **multi-agent simulation environments** to improve the **profitability and efficiency of high-frequency trading (HFT)** strategies. We use a custom simulator based on [ABIDES](https://github.com/abides-sim/abides), integrated with OpenAI Gym, to train intelligent agents using algorithms like **Deep Q-Learning**, **PPO (Proximal Policy Optimization)**, and **LSTM-enhanced neural networks**.
 
-See full Capstone Project report for referance. 
+See full Capstone Project report for reference. 
+- [📘 Capstone Project Report (PDF)](./Reports/Capstone_Project_Report.pdf)
+- [📊 Capstone Project Presentation Slides](./Reports/Capstone_Project_Presentation.pdf)
 
 ##  Objective
 
