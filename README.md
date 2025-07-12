@@ -4,6 +4,8 @@
 
 This capstone project explores how to leverage **Reinforcement Learning (RL)** and **multi-agent simulation environments** to improve the **profitability and efficiency of high-frequency trading (HFT)** strategies. We use a custom simulator based on [ABIDES](https://github.com/abides-sim/abides), integrated with OpenAI Gym, to train intelligent agents using algorithms like **Deep Q-Learning**, **PPO (Proximal Policy Optimization)**, and **LSTM-enhanced neural networks**.
 
+See full Capstone Project report for referance. 
+
 ##  Objective
 
 The main objective is to develop and evaluate intelligent trading agents that:
@@ -56,8 +58,7 @@ The main objective is to develop and evaluate intelligent trading agents that:
 - PPO was more sample-efficient and robust compared to DQN.
 
 ## References
-ABIDES: https://arxiv.org/abs/1904.12066
-PPO: https://arxiv.org/abs/1707.06347
-OpenAI Gym: https://arxiv.org/abs/1606.01540
-
-See full references in the Capstone Report PDF
+- [ABIDES-Gym: Gym Environments for Multi-Agent Discrete Event Simulation and Application to Financial Markets](https://arxiv.org/abs/2110.14771)
+- [An Reinforcement Learning Approach Integrating Diverse Policies for Portfolio Optimization](https://arxiv.org/abs/2210.01774)
+- [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
+- [OpenAI Gym](https://arxiv.org/abs/1606.01540)
