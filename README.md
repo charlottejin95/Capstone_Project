@@ -50,6 +50,8 @@ The main objective is to develop and evaluate intelligent trading agents that:
 | Random           | -2.65%         |
 | Aggressive       | -6.36%         |
 
+![PPO Performance](./images/Comparison_for_Different_Trading_Policies.png)
+
 - LSTM accelerated convergence and improved stability.
 - PPO was more sample-efficient and robust compared to DQN.
 
